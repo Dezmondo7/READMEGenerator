@@ -133,7 +133,7 @@ const questions = () => {
 };
 
 //function to write file readMe file using FS
-const writefile = data => {
+const writeFile = data => {
     fs.writefile('README.md', data, err => {
         if (err) {
             console.log(err);
@@ -145,5 +145,20 @@ const writefile = data => {
     })
 };
 
-//function to initialise questions
-questions();
+// function to initialise questions
+questions()
+
+// returns user answers
+.then(answers => {
+    return generatePage(answers);
+})
+
+//data displays to a pade passed though writeFile 
+.then(data => {
+    return writeFile(data);
+})
+
+//looks for errors
+.catch(err => {
+    console.log(err);
+})
