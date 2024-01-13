@@ -35,9 +35,9 @@ const questions = () => {
                         console.log('Please enter the sections of your project. ');
                         return false;
                     }
-                   
+
                 }
-            },    
+            },
             {
                 type: 'input',
                 message: 'Provide a description of your project: ',
@@ -129,5 +129,21 @@ const questions = () => {
                     }
                 }
             }
-        ])
-}
+        ]);
+};
+
+//function to write file readMe file using FS
+const writefile = data => {
+    fs.writefile('README.md', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        else {
+            console.log('Congratulations your README file has been succesfully generated!');
+        }
+    })
+};
+
+//function to initialise questions
+questions();
