@@ -3,7 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 //link to the generate markdown
-const generateMarkdown = require(".utils/generateMarkdown");
+const generateMarkdown = require(".utils/generateMarkdown.js");
 
 //Array of questions saved as an arrow function  
 const questions = () => {
@@ -24,20 +24,7 @@ const questions = () => {
                     }
                 }
             },
-            {
-                type: 'input',
-                message: 'What are the sections entitled? ',
-                name: 'entitled',
-                validate: nameInput => {
-                    if (nameInput) {
-                        return true;
-                    } else {
-                        console.log('Please enter the sections of your project. ');
-                        return false;
-                    }
-
-                }
-            },
+    
             {
                 type: 'input',
                 message: 'Provide a description of your project: ',
@@ -53,15 +40,16 @@ const questions = () => {
             },
             {
                 type: 'input',
-                message: 'Please relay your table of contents: ',
-                name: 'contents',
+                message: 'What are the sections entitled? ',
+                name: 'section',
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
                     } else {
-                        console.log('Please enter the contents of your project. ');
+                        console.log('Please enter the sections of your project. ');
                         return false;
                     }
+
                 }
             },
             {
@@ -79,7 +67,7 @@ const questions = () => {
             },
             {
                 type: 'input',
-                message: 'Describe the usage of your project? ',
+                message: 'Describe the usage of your project/application? ',
                 name: 'usage',
                 validate: nameInput => {
                     if (nameInput) {
@@ -94,6 +82,8 @@ const questions = () => {
                 type: 'List',
                 message: 'What type of licence would you like to add to your project',
                 name: 'license',
+                choices: ['MIT', 'GNU', 'BSD'],
+                default: ['MIT'],
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
@@ -106,7 +96,7 @@ const questions = () => {
             {
                 type: 'input',
                 message: 'Please list any contributers to your project. ',
-                name: 'contributers',
+                name: 'contributors',
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
@@ -125,6 +115,32 @@ const questions = () => {
                         return true;
                     } else {
                         console.log('Please enter testing methods used. ');
+                        return false;
+                    }
+                }
+            }, 
+            {
+                type: 'input',
+                message: 'What is your email address? ',
+                name: 'email',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your email adress. ');
+                        return false;
+                    }
+                }
+            },
+            {
+                type: 'input',
+                message: 'What is your GitHub URL? ',
+                name: 'github',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your GitHub URL. ');
                         return false;
                     }
                 }
@@ -153,7 +169,7 @@ questions()
     return generatePage(answers);
 })
 
-//data displays to a pade passed though writeFile 
+//data displays then is passed though writeFile 
 .then(data => {
     return writeFile(data);
 })
