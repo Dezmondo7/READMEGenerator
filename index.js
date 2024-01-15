@@ -3,7 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 //link to the generate markdown
-const generateMarkdown = require(".utils/generateMarkdown.js");
+generatePage = require("./utils/generateMarkdown");
 
 //Array of questions saved as an arrow function  
 const questions = () => {
@@ -150,7 +150,7 @@ const questions = () => {
 
 //function to write file readMe file using FS
 const writeFile = data => {
-    fs.writefile('README.md', data, err => {
+    fs.writeFile('README.md', data, err => {
         if (err) {
             console.log(err);
             return;
