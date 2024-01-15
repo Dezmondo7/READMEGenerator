@@ -1,8 +1,8 @@
-# sfgs
+# ReadMe Generator
 
     
     ## Description
-    sdgs
+    delivers a readme file
 
     ## Sections
     undefined
@@ -16,20 +16,20 @@
     * [Questions](#questions)
     
     ## installations
-    sdg
+    npm & inquirer
 
     ## Usage
-    sgd
+    generates a readme based on questions
 
     ## License
-    This project is licensed by sdg
+    This project is licensed by MIT
 
     ## Constributors
-    sdg
+    Me
 
     ## Tests
-    sdg
+    Test
 
     ## Questions
-    If you would like to ask me any questions about this project you can email me here sdg alternatively you can view my other projects at sdg
+    If you would like to ask me any questions about this project you can email me here dalewarby23@outlook.com alternatively you can view my other projects at dale.
     
