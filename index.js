@@ -79,8 +79,8 @@ const questions = () => {
                 }
             },
             {
-                type: 'List',
-                message: 'What type of licence would you like to add to your project',
+                type: 'list',
+                message: 'What type of licence would you like to add to your project? ',
                 name: 'license',
                 choices: ['MIT', 'GNU', 'BSD'],
                 default: ['MIT'],
@@ -88,7 +88,7 @@ const questions = () => {
                     if (nameInput) {
                         return true;
                     } else {
-                        console.log('Please chose a license for your project. ');
+                        console.log('Please choose a license for your project. ');
                         return false;
                     }
                 }
@@ -108,7 +108,7 @@ const questions = () => {
             },
             {
                 type: 'input',
-                message: 'What testing methods did you do? ',
+                message: 'What testing methods did you use? ',
                 name: 'test',
                 validate: nameInput => {
                     if (nameInput) {
