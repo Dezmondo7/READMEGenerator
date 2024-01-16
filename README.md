@@ -1,8 +1,8 @@
-# README Generator
+# Readme Generator
 
     
     ## Description
-    This application uses node.JS to capture users input and generates a READMe file 
+    Application to automate generating a README file 
 
     ## Sections
     undefined
@@ -16,20 +16,20 @@
     * [Questions](#questions)
     
     ## installations
-    FS & inquirer
+    FS & Inquirer
 
     ## Usage
-    The application saves time when inputting information into a README file
+    Generate a README
 
     ## License
     This project is licensed by MIT
 
     ## Constributors
-    none
+    Dale Warburton
 
     ## Tests
-    Test Driven Development
+    TDD
 
     ## Questions
-    If you would like to ask me any questions about this project you can email me here dale@gmail.com alternatively you can view my other projects at dale@github.com
+    If you would like to ask me any questions about this project you can email me here Dale@Gmail.com alternatively you can view my other projects at DalewarbyURL
     

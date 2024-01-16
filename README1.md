@@ -10,8 +10,9 @@ This project required FS and Inquirer to be installed
 The application automates the build of a README file based on the users input
 
 ## Application 
- Below is a link to the video of the working application with the GitHub link to the files
+ Below is a link to the video of the working application with the GitHub link to the files. Images to the application are also below.
 
  https://drive.google.com/file/d/1sp0hY9QtsbRqeQq_LF3Exc9GLpjAMEvK/view?usp=sharing
  https://github.com/Dezmondo7/READMEGenerator 
  
+![Alt text](ReadmeGen.jpg)![Alt text](READMENodeJS.jpg)
